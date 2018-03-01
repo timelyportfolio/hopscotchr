@@ -12,6 +12,20 @@ devtools::install_github("timelyportfolio/hopscotchr")
 
 ## Example
 
+The workflow for creating a tour looks like this.
+
+```
+# in ui
+add_hopscotch()
+
+# in server
+tour <- create_tour(id = "an_id") %>%
+  add_steps(...)
+  
+hopscotch(tour, session)
+```
+
+For now, please see [example](https://github.com/timelyportfolio/hopscotchr/blob/master/inst/examples/example_shiny.R).
 
 ## Code of Conduct
 
