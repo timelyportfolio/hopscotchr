@@ -1,12 +1,29 @@
 Package: hopscotchr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Introductory Tours for Shiny with 'hopscotch'
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
-Encoding: UTF-8
-LazyData: true
+Date: 2018-02-28
+Authors@R: c(
+      person(
+        "Hopscotch", "authors"
+        , role = c("aut", "cph")
+        , comment = "hopscotch authors and contributors https://github.com/linkedin/hopscotch/graphs/contributors"
+      ),
+      person(
+        "Kent", "Russell"
+        , role = c("aut", "cre")
+        , comment = "R interface"
+        , email = "kent.russell@timelyportfolio.com"
+      )
+    )
+Maintainer: Kent Russell <kent.russell@timelyportfolio.com>
+URL: https://github.com/timelyportfolio/hopscotchr
+BugReports: https://github.com/timelyportfolio/hopscotchr/issues
+Description: Add interactive tours to your Shiny app.
+License: MIT + file LICENSE
+LazyData: TRUE
+Imports:
+    htmltools,
+    jsonlite,
+    shiny
 RoxygenNote: 6.0.1

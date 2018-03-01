@@ -14,4 +14,18 @@ hopscotch_dep <- function(offline = TRUE) {
     script = "js/hopscotch.min.js",
     stylesheet = "css/hopscotch.min.css"
   )
+
+}
+
+#' @export
+use_hopscotch <- function(offline = TRUE) {
+  list(
+    hopscotch_dep(offline = offline),
+    htmltools::htmlDependency(
+      name = "hopscotchr",
+      version = "0.1.0",
+      src = system.file("www/hopscotchr", package="hopscotchr"),
+      script = "hopscotchr.js"
+    )
+  )
 }
