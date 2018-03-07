@@ -15,9 +15,14 @@ hopscotch <- function(tour = NULL, session = NULL) {
 }
 
 #' @export
-create_tour <- function(id) {
-  tour <- list(
-    id = id
+create_tour <- function(id = NULL, ...) {
+  if(is.null(id)) {stop("id is a required argument.  Please provide an id.", call. = FALSE)}
+  tour <- Filter(
+    Negate(is.null),
+    list(
+      id = id,
+      ...
+    )
   )
 
   class(tour) <- "hopscotch"
