@@ -15,6 +15,15 @@ hopscotch <- function(tour = NULL, session = NULL) {
 }
 
 #' @export
+hopscotch_end <- function(session = NULL) {
+  if(is.null(session)) stop("Please supply Shiny session.", call. = FALSE)
+  session$sendCustomMessage(
+    "endTour",
+    message = list()
+  )
+}
+
+#' @export
 create_tour <- function(id = NULL, ...) {
   if(is.null(id)) {stop("id is a required argument.  Please provide an id.", call. = FALSE)}
   tour <- Filter(
